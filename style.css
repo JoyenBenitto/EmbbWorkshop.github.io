@@ -29,3 +29,12 @@ html, body{
     justify-content: space-around;
     height: 100%;
 }
+
+@media (max-with: 600px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    h1{
+        color: brown;
+    }
+}
