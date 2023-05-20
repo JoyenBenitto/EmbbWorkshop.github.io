@@ -21,7 +21,9 @@ html, body{
     height: 100%;
     margin-right: 40px;
 }
-
+.workshopdescription{
+    margin: 40px;
+}
 .container{
     display: flex;
     justify-content: space-around;
