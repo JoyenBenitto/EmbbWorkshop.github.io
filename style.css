@@ -1,20 +1,17 @@
 html, body{
     background-color: bisque;
-    height: 100%;
 }
-.head{
+.header{
     text-align: center;
 }
 .Main{
     flex-grow: 1;
     background-color: azure;
-    height: 100%;
 }
 .CourseMaterials,th,td{
     border: 1px solid;
     text-align: center;
     width: 50%;
-    
 }
 .sidebar{
     background-color: bisque;
@@ -26,15 +23,11 @@ html, body{
 }
 .container{
     display: flex;
-    justify-content: space-around;
     height: 100%;
 }
-
-@media (max-with: 600px) {
-    .container{
-        flex-wrap: wrap;
-    }
-    h1{
-        color: brown;
-    }
+.schedule_div{
+    height: 100%;
+}
+.schedule_table{ 
+    display:inline-block;
 }
