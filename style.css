@@ -1,33 +1,207 @@
-html, body{
-    background-color: bisque;
+body{
+    background-color: #110b11;
 }
-.header{
-    text-align: center;
-}
-.Main{
-    flex-grow: 1;
-    background-color: azure;
-}
-.CourseMaterials,th,td{
-    border: 1px solid;
-    text-align: center;
-    width: 50%;
-}
-.sidebar{
-    background-color: bisque;
-    height: 100%;
-    margin-right: 40px;
-}
-.workshopdescription{
-    margin: 40px;
-}
+
 .container{
-    display: flex;
+  margin-top: 5%;
+  padding-right: 5%;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #110b11;
+    position: fixed;
     height: 100%;
-}
-.schedule_div{
-    height: 100%;
-}
-.schedule_table{ 
-    display:inline-block;
-}
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: #DFDFDF;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #FF312E;
+    color: #DFDFDF;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #DFDFDF;
+    color: #FF312E;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  .content{
+    font-family: 'Montserrat', sans-serif;
+    color: #DFDFDF;
+    font-size: 1rem;
+  }
+   
+  .button{
+    background-color: #FF312E;
+    text-decoration: none;
+    color: #110b11;
+    padding: 12px;
+    margin: 0%;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    font-size: 1.4rem;
+  }
+  .button:hover{
+    text-decoration: none;
+    background-color: #110b11;
+    outline: 2px solid #FF312E;
+    color: #DFDFDF;
+  }
+
+  .head1{
+    color: #DFDFDF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .table{
+    width: 100%;
+  }
+
+  sb{
+    font-weight: 500;
+    color: #D81E5B;
+  }
+
+  .table-content{
+    font-family: 'Montserrat', sans-serif;
+    color: #DFDFDF;
+    font-size: 1rem;
+    padding-left: 0%;
+  }
+
+  th{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #FF312E;
+    border: 1px solid #dfdfdf3a;
+    padding: 1.5vw;
+  }
+
+  td{
+    text-align: center;
+    /*border: 1px solid #dfdfdf3a;*/
+  }
+
+  .long-content{
+    font-size: 0.8rem;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .subtitle{
+    color: #8B80F9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+  }
+
+  .main-container{
+    margin-left: 21%;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .main-container{
+      margin-left: 5%;
+  }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+
+    .container{
+      margin-top: 10%;
+    }
+
+    .head1{
+      text-align: center;
+    }
+
+    .subtitle{
+      text-align: center;
+    }
+
+    .long-content{
+      font-size: 0.8rem;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    li{
+      list-style: none;
+      padding-bottom: 5%;
+    }
+    ul{
+    padding: 0;
+    }
+  }
+
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .main-container{
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .long-content{
+      font-size: 0.7rem;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    li{
+      list-style: none;
+      padding-bottom: 5%;
+    }
+    ul{
+    padding: 0;
+    }
+
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+
+    .container{
+      margin-top: 10%;
+    }
+
+    .head1{
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .subtitle{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
