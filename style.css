@@ -1,5 +1,21 @@
+:root {
+  --bg: #111527;
+  --text: #EEEEEE;
+  --emphasis: #FF8C32;
+  --subs: #ddd;
+}
+/*
+:root {
+  --bg: #110b11;
+  --text: #dfdfdf;
+  --emphasis: #FF312E;
+  --subs: #8B80F9;
+}*/
+
+
+
 body{
-    background-color: #110b11;
+    background-color: var(--bg);
 }
 
 .container{
@@ -11,7 +27,7 @@ body{
     margin: 0;
     padding: 0;
     width: 20%;
-    background-color: #110b11;
+    background-color: var(--bg);
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -21,21 +37,21 @@ body{
   /* Sidebar links */
   .sidebar a {
     display: block;
-    color: #DFDFDF;
+    color: var(--text);
     padding: 16px;
     text-decoration: none;
   }
   
   /* Active/current link */
   .sidebar a.active {
-    background-color: #FF312E;
-    color: #DFDFDF;
+    background-color: var(--emphasis);
+    color: var(--text);
   }
   
   /* Links on mouse-over */
   .sidebar a:hover:not(.active) {
-    background-color: #DFDFDF;
-    color: #FF312E;
+    background-color: var(--text);
+    color: var(--emphasis);
   }
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
@@ -47,14 +63,14 @@ body{
 
   .content{
     font-family: 'Montserrat', sans-serif;
-    color: #DFDFDF;
+    color: var(--text);
     font-size: 1rem;
   }
    
   .button{
-    background-color: #FF312E;
+    background-color: var(--emphasis);
     text-decoration: none;
-    color: #110b11;
+    color: var(--bg);
     padding: 12px;
     margin: 0%;
     box-sizing: border-box;
@@ -65,13 +81,32 @@ body{
   }
   .button:hover{
     text-decoration: none;
-    background-color: #110b11;
-    outline: 2px solid #FF312E;
-    color: #DFDFDF;
+    background-color: var(--bg);
+    outline: 2px solid var(--emphasis);
+    color: var(--emphasis);
+  }
+
+  .button2{
+    background-color: var(--subs);
+    text-decoration: none;
+    color: var(--bg);
+    padding:8px;
+    margin: 0%;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .button2:hover{
+    text-decoration: none;
+    background-color: var(--bg);
+    outline: 2px solid var(--subs);
+    color: var(--subs);
   }
 
   .head1{
-    color: #DFDFDF;
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: bolder;
@@ -83,23 +118,24 @@ body{
 
   sb{
     font-weight: 500;
-    color: #D81E5B;
+    color: var(--emphasis);
   }
 
   .table-content{
     font-family: 'Montserrat', sans-serif;
-    color: #DFDFDF;
+    color: var(--text);
     font-size: 1rem;
     padding-left: 0%;
+    width: 100%;
   }
 
   th{
     font-size: 1.5rem;
-    font-weight: 500;
-    color: #FF312E;
-    border: 1px solid #dfdfdf3a;
+    font-weight: 600;
+    color: var(--bg);
     padding: 1.5vw;
-  }
+    background-color: var(--emphasis);
+    }
 
   td{
     text-align: center;
@@ -113,7 +149,7 @@ body{
   }
 
   .subtitle{
-    color: #8B80F9;
+    color: var(--subs);
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
   }
@@ -126,6 +162,9 @@ body{
   @media screen and (max-width: 700px) {
     .main-container{
       margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
     
     .sidebar {
