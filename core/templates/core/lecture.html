@@ -1,0 +1,36 @@
+{%extends 'core/base.html' %}
+
+{% block title %} Lecture {% endblock %}
+{% block content %}
+    <div>
+        <div class="sidebar">
+          <a href="{% url 'index'%}">Home</a>
+          <a class="active" href="">Lecture</a>
+          <a href="{% url 'schedule'%}">Schedule</a>
+          <!--<a href="">Reading</a>
+          <a href="">Lab</a>
+          <a href="">Extra Assignment</a>
+          <a href="">Technical Docs</a>-->
+        </div>
+        <div class="main-container">
+            <h1 class="head1">Lecture Notes <br> <span class="subtitle"></span> </h1>
+            <br>
+            <table class="table-content">
+              <thead>
+                <tr>
+                  <th scope="col">Material</th>
+                  <th scope="col">Download</th>
+                </tr>
+              </thead>
+              <tbody>
+{% for item in all_items %}
+                <tr>
+                  <td><br>Introduction</td>
+                  <td><br><a href="{{ item.links }}" class="button2">{{ item.name }}</a></td>
+                </tr>
+{% endfor %}
+              </tbody>
+            </table>
+    </div>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+{% endblock %}
