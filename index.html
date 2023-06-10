@@ -1,59 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Embedded Sytems Summer'23</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1 class = "head">
-    Embedded Sytem Design - A simple hands-on approach<br>
-    Summer'23<br>
-  </h1>
-  <div class="container">
-    <div class="sidebar">  
-      <P>
-        <b>Materials</b><br>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-            <li><a href="lecture.html">Lecture</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="">Reading</a></li>
-            <li><a href="">Lab</a></li>
-            <li><a href="">Extra Assignment</a></li>
-            <li><a href="">Technical Docs</a></li>
-        </ul>
-      </P>
-    </div>
-    <div class = "Main">
-      <div>
-        <p align="center">
-          <i>Register for the course here:<a href="https://forms.gle/E2nHbTQTY7UBEYQZ7">Click Here</a><br></i> 
-        </p>
-      </div> 
-      <p class= "workshopdescription">
-        📢 Introducing: "Embedded System Design - A Simple Hands-On Approach" Course 🧰<br>
-        <br>
-        Are you ready to dive into the exciting world of embedded systems? Unlock your potential and master the art of designing innovative embedded solutions.<br>
-        <br>
-        🔧 What You'll Learn:<br>
-        🔹 Microcontroller ARM Cortex M3: Discover the power of this versatile microcontroller and explore its capabilities for building embedded systems.<br>
-        🔹 Embedded C: Learn the fundamentals of embedded C programming and gain hands-on experience in writing efficient and reliable code. Learn to design and debug code efficiently.<br>
-        🔹 Basic Hardware Concepts: Develop a solid understanding of the key hardware components used in embedded systems and how they interact.<br>
-        🔹 Protocols (UART, I2C, SPI, and CAN): Master the communication protocols commonly used in embedded systems, enabling seamless data exchange.<br>
-        🔹 Building Embedded Solutions: Acquire practical skills in designing and implementing embedded solutions, from concept to prototype.<br>
-        🔹 Basic Job Description for Embedded Domain: Gain insights into the diverse opportunities and career paths available in the embedded industry.<br>
-        <br>
-        🎯 Prerequisites:<br>
-        To make the most of this course, it is recommend that you have basic knowledge of electronics, hardware, and C programming. 
-        This foundation will ensure you can fully engage with the course material and apply your skills effectively.<br>
-      </p>
-    </div>
+    <title>Embedded Systems Summer'23</title>
+  </head>
+  <body>
     <div>
+        <div class="sidebar">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+          </div>
+          <br>
+          <a class="active" href="index.html">Home</a>
+          <a href="lecture.html">Lecture</a>
+          <a href="schedule.html">Schedule</a>
+          <!--<a href="">Reading</a>
+          <a href="">Lab</a>
+          <a href="">Extra Assignment</a>
+          <a href="">Technical Docs</a>-->
+        </div>
+        <div class="main-container">
+            <h1 class="head1">Embedded System Design <br> <span class="subtitle">A simple hands-on approach</span> </h1>
+            <br>
+            <a href="https://docs.google.com/forms/d/1UbfkZLsE2Xm5EU9yF-FnypRJPpiIMcJHF3XQ7YF344s/edit" class="button">Register Here</a>
+            <div class="container">
+              <p class="content">Are you ready to dive into the exciting world of embedded systems? <br> Unlock your potential and master the art of designing innovative embedded solutions.</p>
+              <p class="subtitle">What You'll Learn</p> 
+              <ul>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Microcontroller ARM Cortex M3</span><br><br> Discover the power of this versatile microcontroller and explore its capabilities for building embedded systems.</li>
+                <br>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Embedded C</span><br><br>Learn the fundamentals of embedded C programming and gain hands-on experience in writing efficient and reliable code. Learn to design and debug code efficiently.</li>
+                <br>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Basic Hardware Concepts</span><br><br>Develop a solid understanding of the key hardware components used in embedded systems and how they interact.</li>
+                <br>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Protocols (UART, I2C, SPI, and CAN)</span><br><br>Master the communication protocols commonly used in embedded systems, enabling seamless data exchange.</li>
+                <br>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Building Embedded Solutions</span><br><br>Acquire practical skills in designing and implementing embedded solutions, from concept to prototype.</li>
+                <br>
+                <li class="content"><span style="color: var(--emphasis); font-weight: 500;">Basic Job Description for Embedded Domain</span><br><br>Gain insights into the diverse opportunities and career paths available in the embedded industry.</li>
+              </ul>
+              <p class="subtitle">Prerequisites</p>
+              <p class="content">To make the most of this course, it is recommend that you have basic knowledge of electronics, hardware, and C programming. This foundation will ensure you can fully engage with the course material and apply your skills effectively.</p>
+             </div>
     </div>
-  </div>
-    
-
-</body>
+    <script src="script.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>    
+  </body>
 </html>

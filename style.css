@@ -1,33 +1,322 @@
-html, body{
-    background-color: bisque;
+:root {
+  --bg: #10121d;
+  --text: #EEEEEE;
+  --emphasis: #FF8C32;
+  --subs: #ddd;
 }
-.header{
-    text-align: center;
+
+[data-theme="light"] {
+  --bg: #F6F5F5;
+  --text: #07689F;
+  --emphasis: #EE6F57;
+  --subs: #070D59;
 }
-.Main{
-    flex-grow: 1;
-    background-color: azure;
+
+
+/*
+:root {
+  --bg: #110b11;
+  --text: #dfdfdf;
+  --emphasis: #FF312E;
+  --subs: #8B80F9;
+}*/
+
+
+
+body{
+    background-color: var(--bg);
 }
-.CourseMaterials,th,td{
-    border: 1px solid;
-    text-align: center;
-    width: 50%;
-}
-.sidebar{
-    background-color: bisque;
-    height: 100%;
-    margin-right: 40px;
-}
-.workshopdescription{
-    margin: 40px;
-}
+
 .container{
-    display: flex;
+  margin-top: 5%;
+  padding-right: 5%;
+}
+
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: var(--text);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: var(--bg);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--emphasis);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: var(--bg);
+    position: fixed;
     height: 100%;
-}
-.schedule_div{
-    height: 100%;
-}
-.schedule_table{ 
-    display:inline-block;
-}
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: var(--text);
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: var(--emphasis);
+    color: var(--text);
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: var(--text);
+    color: var(--emphasis);
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
+  .content{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    font-size: 1rem;
+  }
+   
+  .button{
+    background-color: var(--emphasis);
+    text-decoration: none;
+    color: var(--bg);
+    padding: 12px;
+    margin: 0%;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    font-size: 1.4rem;
+  }
+  .button:hover{
+    text-decoration: none;
+    background-color: var(--bg);
+    outline: 2px solid var(--emphasis);
+    color: var(--emphasis);
+  }
+
+  .button2{
+    background-color: var(--subs);
+    text-decoration: none;
+    color: var(--bg);
+    padding:8px;
+    margin: 0%;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .button2:hover{
+    text-decoration: none;
+    background-color: var(--bg);
+    outline: 2px solid var(--subs);
+    color: var(--subs);
+  }
+
+  .head1{
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .table{
+    width: 100%;
+  }
+
+  sb{
+    font-weight: 500;
+    color: var(--emphasis);
+  }
+
+  .table-content{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    font-size: 1rem;
+    padding-left: 0%;
+    width: 100%;
+  }
+
+  th{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg);
+    padding: 1.5vw;
+    background-color: var(--emphasis);
+    }
+
+  td{
+    text-align: center;
+    /*border: 1px solid #dfdfdf3a;*/
+  }
+
+  .long-content{
+    font-size: 0.8rem;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .subtitle{
+    color: var(--subs);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+  }
+
+  .main-container{
+    margin-left: 21%;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .main-container{
+      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+
+    .container{
+      margin-top: 10%;
+    }
+
+    .head1{
+      text-align: center;
+    }
+
+    .subtitle{
+      text-align: center;
+    }
+
+    .long-content{
+      font-size: 0.8rem;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    li{
+      list-style: none;
+      padding-bottom: 5%;
+    }
+    ul{
+    padding: 0;
+    }
+    
+    .theme-switch-wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .main-container{
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .long-content{
+      font-size: 0.7rem;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    li{
+      list-style: none;
+      padding-bottom: 5%;
+    }
+    ul{
+    padding: 0;
+    }
+
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+
+    .container{
+      margin-top: 10%;
+    }
+
+    .head1{
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .subtitle{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .theme-switch-wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
