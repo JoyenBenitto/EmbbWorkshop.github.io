@@ -199,7 +199,7 @@ input:checked + .slider:before {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg);
-    padding: 1.5vw;
+    padding: 0.8vw;
     background-color: var(--emphasis);
     }
 
