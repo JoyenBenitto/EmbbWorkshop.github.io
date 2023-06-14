@@ -142,6 +142,7 @@ input:checked + .slider:before {
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
     font-size: 1.4rem;
+    transition: background-color 300ms;
   }
   .button:hover{
     text-decoration: none;
@@ -161,6 +162,7 @@ input:checked + .slider:before {
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
     font-size: 1rem;
+    transition: background-color 300ms;
   }
   .button2:hover{
     text-decoration: none;
@@ -207,8 +209,14 @@ input:checked + .slider:before {
   }
 
   .long-content{
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: left;
+    padding-left: 5%;
+  }
+
+  .medium-content{
+    text-align: left;
+    font-size: 1.2rem;
     padding-left: 5%;
   }
 
@@ -221,6 +229,24 @@ input:checked + .slider:before {
   .main-container{
     margin-left: 21%;
   }
+
+  .button3{
+    color: var(--text);
+    text-decoration: underline 0.15em var(--bg);
+    font-weight: 500;
+    transition: text-decoration-color 300ms;
+    transition: color 300ms;
+  }
+
+  .button3:hover{
+    color: var(--emphasis);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    text-decoration: underline;
+    text-decoration-color: var(--emphasis);
+  }
+
+
   
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 700px) {
@@ -252,8 +278,14 @@ input:checked + .slider:before {
     }
 
     .long-content{
-      font-size: 0.8rem;
       text-align: center;
+      font-size: 0.8rem;
+      padding-left: 0%;
+    }
+
+    .medium-content{
+      text-align: center;
+      font-size: 1rem;
       padding-left: 0%;
     }
 
@@ -282,10 +314,16 @@ input:checked + .slider:before {
     }
 
     .long-content{
-      font-size: 0.7rem;
       text-align: center;
       padding-left: 0%;
     }
+
+    .medium-content{
+      text-align: center;
+      font-size: 0.8rem;
+      padding-left: 0%;
+    }
+
 
     li{
       list-style: none;
