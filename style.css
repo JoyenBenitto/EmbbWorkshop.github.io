@@ -323,7 +323,7 @@ input:checked + .slider:before {
     }
     .img-button{
       width: 90%;
-      margin-left: 2%;
+      margin-left: 3%;
     }
   }
 
