@@ -345,6 +345,8 @@ input:checked + .slider:before {
       text-align: center;
       font-size: 0.8rem;
       padding-left: 0%;
+      font-size: 0.5rem;
+      padding-top: 20px;
     }
 
 
@@ -379,5 +381,16 @@ input:checked + .slider:before {
       display: flex;
       align-items: center;
       flex-direction: column;
+    }
+    th{
+      font-size: 0.8rem;
+    }
+    .button2{
+      font-size: 0.4rem;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .button3{
+      font-size: 0.6rem;
     }
   }
